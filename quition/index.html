@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+            ما هي الميزات الجديدة التي قدمتها (6ES (2015 ECMAScript في لغة JavaScript؟ قم
+            بذكر أكبر عدد ممكن من هذه الميزات مع شرح موجز لكل ميزة.
+
+            1- let , const
+                let: Defines a block-scoped variable that can be reassigned.
+                const: Defines a block-scoped constant that cannot be reassigned after its initial assignment.
+            2- arrow function
+                - Provide a concise syntax for writing functions
+            const x=()=>{}
+            3- Template Literals:
+                - Offer an easy way to embed variables within strings
+            4-Default Parameters:
+                Allow setting default values for function parameters.
+            5-Spread Operators
+                - Collect multiple values into an array (...spread)
+            6- Destructuring:
+                - Extract values from arrays or objects and assign them to variables.
+            7- Promises:
+                - Manage asynchronous operations more effectively
+            8- Maps and Sets:
+                - New data structures for managing unique collections of values or key-value pairs.
+            9- Modules:
+                - Support for modules to import and export functions, objects, or values.
+            
+    -->
+    <!-- 
+            كيف يمكنك جلب البيانات من API بطرق مختلفة في JavaScript؟ اشرح ثالثة طرق مختلفة
+            مع ذكر مثال لكل طريقة.
+
+            1-XMLHttpRequest
+
+            function fetchDataWithXHR() {
+                    const http = new XMLHttpRequest();
+                    http.open("GET", "https://api.example.com/data");
+                    http.onreadystatechange = function () {
+                        if (http.readyState === 4 && http.status === 200) {
+                            const data = JSON.parse(http.responseText);
+                            console.log(data);
+                        }
+                    };
+                    http.send();
+            }
+            fetchDataWithXHR();
+            ========================================================
+            2-featch
+            function fetchDataWithFetch() {
+                fetch("https://api.example.com/data")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok " + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error("There has been a problem with your fetch operation:", error);
+                });
+            }
+                fetchDataWithFetch();
+                =======================================================
+                3- axios
+                const axios = require('axios');
+                function fetchDataWithAxios() {
+                    axios.get("https://api.example.com/data")
+                        .then(response => {
+                            console.log(response.data);
+                        })
+                        .catch(error => {
+                            console.error("There has been a problem with your axios operation:", error);
+                        });
+                }
+                fetchDataWithAxios();
+    -->
+</body>
+</html>
